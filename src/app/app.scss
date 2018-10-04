@@ -14,3 +14,49 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+$light:                           #fff !default;
+$stable:                          #394264 !default; // bg color dark
+$positive:                        #4fc4f6 !default; // okay button popup, item headings
+$calm:                            #11c1f3 !default;
+$balanced:                        #fcb150 !default; // spinner orange
+$energized:                       #11a8ab !default; // top header cyan
+$assertive:                       #BF3030 !default;
+$royal:                           #50597b !default; // items
+$dark:                            #444 !default;
+
+$base-background-color:           $stable;
+$base-color:                      $light;
+
+$item-royal-text:                 $light;
+
+$scroll-refresh-icon-color:       $balanced;
+
+$bar-stable-text:                 $light;
+$bar-stable-border:               #383f5d;
+
+$button-default-text:             $light !default;
+$button-default-active-bg:        darken($stable, 10) !default;
+
+$checkbox-width:                  20px !default;
+$checkbox-height:                 20px !default;
+$checkbox-off-bg-color:           $royal !default;
+$checkbox-border-width:           0px !default;
+$popup-background-color:          rgba(255,255,255,1) !default;

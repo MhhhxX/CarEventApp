@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Details</ion-title>
+  </ion-navbar>
+</ion-header>
+  <ion-content padding="true">
+      <h3>{{ (event | async)?.name }}</h3>
+      <h4><b>{{event.city}}</b> <small>({{event.district}})</small></h4>
+      <br>
+
+      <div class="text-center">
+        <img src="{{ (event | async)?.image }}" class="image">
+      </div>
+
+      <ion-list>
+        <ion-item class="item-divider item-icon-right"><b>Address</b> <i class="icon ion-location"></i></ion-item>
+        <ion-item>
+          {{ (event | async)?.address.street }} {{ (event | async)?.address.number }}<br>
+          {{ (event | async)?.address.zip }} {{ (event | async)?.address.city }}
+        </ion-item>
+      </ion-list>
+      <br>
+      <ion-list>
+        <ion-item class="item-divider item-icon-right"><b>Dates</b> <i class="icon ion-ios-calendar-outline"></i></ion-item>
+        <ion-item ng-repeat="date in event.dates">
+          {{ (event | async)?.starttime }}
+        </ion-item>
+      </ion-list>
+      <br>
+      <ion-list>
+        <ion-item class="item-divider item-icon-right"><b>Contact</b> <i class="icon ion-chatboxes"></i></ion-item>
+        <ion-item class="item-icon-right" ng-click="call()">
+          Call us
+          <i class="icon ion-android-call"></i>
+        </ion-item>
+        <ion-item class="item-icon-right" ng-click="mail()">
+          Send us an e-mail
+          <i class="icon ion-ios-email"></i>
+        </ion-item>
+        <ion-item class="item-icon-right" ng-click="website()">
+          Visit our homepage
+          <i class="icon ion-ios-home"></i>
+        </ion-item>
+      </ion-list>
+  </ion-content>

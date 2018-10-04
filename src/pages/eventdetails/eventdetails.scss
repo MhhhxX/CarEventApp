@@ -1,0 +1,51 @@
+page-eventdetails {
+
+  .background-stable {
+    background-color: $stable;
+  }
+
+  .background-royal {
+    background-color: $royal;
+  }
+
+  .item {
+    &.item-divider {
+      background-color: $stable;
+      border-width: 0;
+      color: $light;
+    }
+
+    > .item-content {
+      > p {
+        color: $light;
+      }
+      > h2 {
+        color: $positive;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .image {
+    border: 2px solid $energized;
+    @include border-radius(50%);
+    width: 200px;
+    height: 200px;
+  }
+
+  .modal {
+    h1, h2, h3 {
+      color: $dark;
+    }
+  }
+
+  .popup .popup-body input[type="text"] {
+    border: 1px solid lighten($stable, 40);
+    padding: 0 5px;
+  }
+
+  .spinner svg {
+    stroke: $balanced;
+    fill: $balanced;
+  }
+}
