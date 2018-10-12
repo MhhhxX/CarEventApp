@@ -91,7 +91,7 @@
         <variable name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="This app wants to get your location always, even this app runs in background." />
     </plugin>
     <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
-    <allow-navigation href="http://192.168.0.63:8100" sessionid="6bc52e35" />
+    <allow-navigation href="http://192.168.0.63:8100" sessionid="908e0eb1" />
     <engine name="ios" spec="4.5.5" />
     <engine name="windows" spec="5.0.0" />
     <engine name="browser" spec="5.0.4" />

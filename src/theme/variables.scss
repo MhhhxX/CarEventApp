@@ -37,8 +37,15 @@ $colors: (
   primary:    #488aff,
   secondary:  #32db64,
   danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
+  light:                           #fff ,
+  stable:                          #394264, // bg color dark
+  positive:                        #4fc4f6, // okay button popup, item headings
+  calm:                            #11c1f3,
+  balanced:                        #fcb150, // spinner orange
+  energized:                       #11a8ab, // top header cyan
+  assertive:                       #BF3030,
+  royal:                           #50597b, // items
+  dark:                            #444,
 );
 
 

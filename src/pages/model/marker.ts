@@ -22,6 +22,14 @@ abstract class MarkerContainer {
     return this.markerDict;
   }
 
+  public getLength(): number {
+    let count: number = 0;
+    for (let key in this.markerDict) {
+      count++;
+    }
+    return count;
+  }
+
 }
 
 export class GoogleMarkerContainer extends MarkerContainer {
@@ -57,9 +65,6 @@ export class GoogleMarkerContainer extends MarkerContainer {
             marker = this.addMarker(value);
             marker.detailsClicked(this.navCtrl);
             break;
-          case ListActions.REMOVED:
-            this.removeMarker(action.key);
-            break;
           case ListActions.CHANGED:
             this.updateMarker(value.key, value.position, value.title);
             break;
@@ -67,6 +72,10 @@ export class GoogleMarkerContainer extends MarkerContainer {
             console.error("Unknown list action", action.type);
         }
       });
+    });
+
+    this.list.stateChanges(['child_removed']).subscribe(action => {
+      this.removeMarker(action.key);
     });
   }
 
@@ -181,7 +190,6 @@ export class GoogleMarker extends CustomMarker{
 
   detailsClicked(navCtl: NavController) {
     this.content.getElementsByTagName("button")[0].addEventListener("click", () => {
-      console.log("ajeif");
       this.item.showDetails(navCtl);
     });
   }

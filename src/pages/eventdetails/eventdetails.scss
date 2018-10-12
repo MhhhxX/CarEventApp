@@ -1,51 +1,82 @@
 page-eventdetails {
+  $base-background-color:           color($colors, stable);
+  $base-color:                      color($colors, light);
+
+  $item-royal-text:                 color($colors, light);
+
+  $scroll-refresh-icon-color:       color($colors, balanced);
+
+  $bar-stable-text:                 color($colors, light);
+  $bar-stable-border:               #383f5d;
+
+  $button-default-text:             color($colors, light);
+  $button-default-active-bg:        darken(color($colors, stable), 10);
+
+  $checkbox-width:                  20px;
+  $checkbox-height:                 20px;
+  $checkbox-off-bg-color:           color($colors, royal);
+  $checkbox-border-width:           0px;
+  $popup-background-color:          rgba(255,255,255,1);
 
   .background-stable {
-    background-color: $stable;
+    background-color: color($colors, stable);
   }
 
   .background-royal {
-    background-color: $royal;
+    background-color: color($colors, royal);
   }
 
   .item {
     &.item-divider {
-      background-color: $stable;
+      background-color: color($colors, stable);
       border-width: 0;
-      color: $light;
+      color: color($colors, light);
     }
 
     > .item-content {
       > p {
-        color: $light;
+        color: color($colors, stable);
       }
       > h2 {
-        color: $positive;
+        color: color($colors, positive);
         font-weight: bold;
       }
     }
   }
 
+  ion-content {
+    > h3, h4 {
+      color: color($colors, light);
+    }
+
+  }
+
+  ion-content {
+    h3 {
+      color: color($colors, light);
+    }
+  }
+
   .image {
-    border: 2px solid $energized;
+    border: 2px solid color($colors, energized);
     @include border-radius(50%);
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: auto;
   }
 
   .modal {
     h1, h2, h3 {
-      color: $dark;
+      color: color($colors, dark);
     }
   }
 
   .popup .popup-body input[type="text"] {
-    border: 1px solid lighten($stable, 40);
+    border: 1px solid lighten(color($colors, stable), 40);
     padding: 0 5px;
   }
 
   .spinner svg {
-    stroke: $balanced;
-    fill: $balanced;
+    stroke: color($colors, balanced);
+    fill: color($colors, balanced);
   }
 }
